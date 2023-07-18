@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime presentation="year" width="100%" [min]="2014" [max]="2034" [value]="2021"
+        id="datetime">
+      </ion-datetime>
+    </ng-template>
+  </ion-modal>
+  <div class="select-icon" (click)="openPicker()">open picker</div>
+</ion-content>
